@@ -1,0 +1,146 @@
+﻿/* Базовые стили */
+:root {
+    --main-bg-color: #f8f8f8;
+    --text-color: #333;
+    --link-color: #20B2AA;
+    --link-hover-color: #008080;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    --main-padding: 20px;
+    --main-border-radius: 8px;
+    --white-color: #fff;
+    --nav-bg-color: #20B2AA;
+    --button-padding: 10px 15px;
+    --transition-duration: 0.3s;
+    --form-input-height: 40px;
+    --form-input-border: 1px solid #ddd;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    line-height: 1;
+}
+
+/* Общие стили для шапки и навигации */
+.app-header, .app-navbar {
+    width: 100%;
+}
+
+.app-header {
+    padding: 0;
+    margin: 0;
+}
+
+.app-header-container,
+.app-navbar {
+    z-index: 1;
+}
+
+/* Стили для навигации */
+.app-navbar {
+    background-color: var(--nav-bg-color);
+    padding: 15px 0;
+    box-shadow: var(--box-shadow);
+}
+
+.app-navbar-brand {
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.app-navbar-nav {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+    .app-navbar-nav li {
+        margin-right: 10px;
+    }
+
+        .app-navbar-nav li:last-child {
+            margin-right: 0;
+        }
+
+    /* Общие стили для навигационных ссылок и кнопок */
+    .app-navbar-nav .nav-link,
+    .app-navbar-nav form button {
+        color: var(--white-color);
+        text-decoration: none;
+        padding: var(--button-padding);
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+        cursor: pointer;
+        transition: background-color var(--transition-duration) ease;
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+        .app-navbar-nav .nav-link:hover,
+        .app-navbar-nav form button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+.app-navbar-collapse {
+    justify-content: space-between;
+}
+
+.app-navbar-toggler {
+    display: none;
+}
+
+/* Стили для основного контейнера */
+.app-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 var(--main-padding);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* Стили для содержимого */
+.app-main {
+    padding: var(--main-padding) 0;
+    width: 900px; /* Задаём ширину основного содержимого */
+    max-width: 100%;
+}
+
+/* Общие стили для section и pb-3 */
+.app-section,
+.pb-3 {
+    background-color: var(--white-color);
+    padding: var(--main-padding);
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: var(--main-padding);
+    max-width: 900px;
+    box-sizing: border-box;
+}
+
+.app-section {
+    width: 100%;
+}
+
+.pb-3 {
+    /*width: 100%;*/
+}
+
+/* Содержимое секции */
+.section-content {
+    max-width: 1200px;
+    width: 100%;
+}

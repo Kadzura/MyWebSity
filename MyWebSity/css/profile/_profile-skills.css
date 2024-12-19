@@ -1,0 +1,42 @@
+﻿#skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.skill-item {
+    padding: 10px;
+    border: var(--form-input-border);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.skill-actions button {
+    margin-left: 5px;
+}
+
+.skill-form {
+    margin-top: 10px;
+}
+
+    .skill-form .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+#add-skill-btn {
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+}

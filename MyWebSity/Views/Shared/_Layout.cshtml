@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ResumeWebsite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/_reset.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/_base.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/_layout.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="app-header">
+        <div class="app-header-container">
+            <nav class="app-navbar navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="app-navbar-brand" href="/">ResumeWebsite</a>
+                    <div class="app-navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <div class="app-navbar-nav">
+
+                            <a class="nav-link" href="/">Home</a>
+
+                            @if (Context.Session.GetString("CurrentUser") == null)
+                            {
+                                <a class="nav-link" href="/login">Login</a>
+                            }
+                            else
+                            {
+                                <form class="form-inline" method="post" action="/logout">
+                                    <button type="submit" class="nav-link">Logout</button>
+                                </form>
+                            }
+
+                            <a class="nav-link" href="/profile">Profile</a>
+                        </div>
+                    </div>
+                    @* Город и пагода *@
+                    @* @await Html.PartialAsync("_WeatherPartial", (MyWebSity.Models.CityInfo)ViewBag.CityInfo) *@
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="app-container">
+        <main role="main" class="app-main pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿@model MyWebSity.Models.ResumeData
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<section>
+    <h2>Skills</h2>
+    <ul>
+        @foreach (var skill in Model.Skills)
+        {
+            <li>@skill</li>
+        }
+    </ul>
+</section>
+<section>
+    <h2>Experience</h2>
+    <ul>
+        @foreach (var experience in Model.Experience)
+        {
+            <li>
+                <strong>@experience.Company - @experience.Position</strong>
+                <p>@experience.StartDate - @experience.EndDate</p>
+                <p>@experience.Description</p>
+            </li>
+        }
+    </ul>
+</section>
+<section>
+    <h2>Education</h2>
+    <ul>
+        @foreach (var education in Model.Education)
+        {
+            <li>
+                <strong>@education.Institution - @education.Degree</strong>
+                <p>@education.Year</p>
+            </li>
+        }
+    </ul>
+</section>

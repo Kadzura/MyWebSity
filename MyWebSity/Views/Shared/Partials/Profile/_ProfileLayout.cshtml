@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "_Layout";
+}
+<link rel="stylesheet" href="~/css/_profile.min.css" asp-append-version="true" />
+
+<div class="profile-container">
+    <div class="profile-left">
+        @RenderSection("PersonalDetails", required: true)
+    </div>
+
+    <div class="profile-right">
+        <div class="tab-container">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="education">Education</button>
+                <button class="tab-button" data-tab="experience">Experience</button>
+                <button class="tab-button" data-tab="skills">Skills</button>
+            </div>
+
+            <div id="education" class="tab-content active">
+                @RenderSection("EducationContent", required: true)
+            </div>
+            <div id="experience" class="tab-content">
+                @RenderSection("ExperienceContent", required: true)
+            </div>
+            <div id="skills" class="tab-content">
+                @RenderSection("SkillsContent", required: true)
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/_profile.min.js" asp-append-version="true"></script>

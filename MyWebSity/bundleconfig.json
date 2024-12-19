@@ -1,0 +1,34 @@
+﻿[
+  // Style Personal
+  {
+    "outputFileName": "wwwroot/css/_profile.min.css",
+    "inputFiles": [
+      "css/profile/_profile.css",
+      "css/profile/_profile-personal.css",
+      "css/profile/_profile-education.css",
+      "css/profile/_profile-experience.css",
+      "css/profile/_profile-skills.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "output": {
+        "ie8": false
+      }
+    }
+  },
+  // JavaScript Personal
+  {
+    "outputFileName": "wwwroot/js/_profile.min.js",
+    "inputFiles": [
+      "js/profile/_profile.js",
+      "js/profile/_profile-personal.js",
+      "js/profile/_profile-education.js",
+      "js/profile/_profile-experience.js",
+      "js/profile/_profile-skills.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  }
+]

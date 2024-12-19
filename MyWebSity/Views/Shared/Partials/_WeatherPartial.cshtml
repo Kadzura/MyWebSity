@@ -1,0 +1,8 @@
+﻿@model MyWebSity.Models.CityInfo
+
+<div class="weather-widget">
+    <p><b>Город:</b> @(Model.CityName ?? "Не определено")</p>
+    <p><b>Погода:</b> @(Model.WeatherDescription ?? "Не определено")</p>
+    <p><b>Температура:</b> @(Model.Temperature?.ToString("F1") ?? "Не определено") °C</p>
+    <p><b>Ветер:</b> @(Model.WindSpeed?.ToString("F1") ?? "Не определено") м/с</p>
+</div>

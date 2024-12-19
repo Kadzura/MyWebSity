@@ -1,0 +1,38 @@
+﻿@model MyWebSity.Models.UserProfile
+
+<div class="profile-photo">
+    <img id="profile-image-preview" src="@Model.ProfilePicturePath" alt="Profile Picture" />
+    <div class="profile-photo-upload">
+        <button class="upload-button">Загрузить</button>
+        <input type="file" id="ProfilePicture" name="ProfilePicture" accept="image/*" />
+    </div>
+</div>
+
+<div class="profile-details">
+    <form id="profile-form">
+        <div class="form-group">
+            <label>ФИО</label>
+            <input type="text" class="form-control" name="FullName" value="@Model.FullName" required />
+        </div>
+        <div class="form-group">
+            <label>Дата рождения</label>
+            <input type="date" class="form-control" name="DateOfBirth" value="@Model.DateOfBirth.ToString("yyyy-MM-dd")" required />
+        </div>
+        <div class="form-group">
+            <label>Номер телефона</label>
+            <input type="tel" class="form-control" name="PhoneNumber" value="@Model.PhoneNumber" required />
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" name="Email" value="@Model.Email" required />
+        </div>
+        <div class="form-group">
+            <label>Пароль</label>
+            <input type="password" class="form-control" name="Password" required />
+        </div>
+        <div class="form-group profile-buttons">
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+            <button type="button" class="btn btn-secondary">Выйти</button>
+        </div>
+    </form>
+</div>

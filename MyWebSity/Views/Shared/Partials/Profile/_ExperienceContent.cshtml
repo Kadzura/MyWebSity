@@ -1,0 +1,28 @@
+﻿<div id="experience-list">
+    <!-- Сюда будут добавлены секции опыта работы -->
+</div>
+<button id="add-experience-btn" class="btn btn-secondary">Add Experience</button>
+<script id="experience-item-template" type="text/template">
+    <div class="experience-item">
+        <form class="experience-form">
+            <div class="form-group">
+                <label>Название компании</label>
+                <input type="text" class="form-control company-name-input" required />
+            </div>
+            <div class="form-group">
+                <label>Должность</label>
+                <input type="text" class="form-control position-input" required />
+            </div>
+            <div class="form-group">
+                <label>Период работы</label>
+                <input type="text" class="form-control period-input" required />
+            </div>
+            <div class="form-group">
+                <label>Описание обязанностей</label>
+                <textarea class="form-control responsibilities-input" required></textarea>
+            </div>
+            <button type="submit" class="save-experience-btn btn btn-primary">Сохранить</button>
+            <button type="button" class="delete-experience-btn btn btn-danger">Удалить</button>
+        </form>
+    </div>
+</script>

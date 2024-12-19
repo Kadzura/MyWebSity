@@ -1,0 +1,32 @@
+﻿<div id="education-list">
+    <!-- Сюда будут добавлены секции образования -->
+</div>
+<button id="add-education-btn" class="btn btn-secondary">Add Education</button>
+
+<script id="education-item-template" type="text/template">
+    <div class="education-item">
+        <form class="education-form">
+            <div class="form-group">
+                <label>Учебное заведение</label>
+                <input type="text" class="form-control university-name-input" required />
+            </div>
+            <div class="form-group">
+                <label>Уровень</label>
+                <select class="form-control degree-input" required>
+                    <option value="Основное общее образование">Основное общее образование</option>
+                    <option value="Среднее общее образование">Среднее общее образование</option>
+                    <option value="Среднее профессиональное образование">Среднее профессиональное образование</option>
+                    <option value="Бакалавриат">Бакалавриат</option>
+                    <option value="Специалитет">Специалитет</option>
+                    <option value="Магистратура">Магистратура</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Период обучения</label>
+                <input type="text" class="form-control period-input" required />
+            </div>
+            <button type="submit" class="save-education-btn btn btn-primary">Сохранить</button>
+            <button type="button" class="delete-education-btn btn btn-danger">Удалить</button>
+        </form>
+    </div>
+</script>

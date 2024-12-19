@@ -1,0 +1,73 @@
+﻿.profile-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+}
+
+.profile-left {
+    padding: 10px;
+    border-right: 1px solid #ddd;
+}
+
+.profile-right {
+    padding: 10px;
+}
+
+/* Styling for tabs */
+.tab-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.tab-button {
+    padding: 10px 15px;
+    background-color: #f4f4f4;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .tab-button:hover, .tab-button.active {
+        background-color: #e0e0e0;
+        border-bottom-color: #20B2AA;
+    }
+
+.tab-content {
+    display: none;
+    padding: 15px 0;
+}
+
+    .tab-content.active {
+        display: block;
+    }
+
+/* Styling for error messages */
+.text-danger {
+    color: red;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-left,
+    .profile-right {
+        border-right: none;
+        padding: 5px;
+    }
+}

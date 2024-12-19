@@ -1,0 +1,18 @@
+﻿@model MyWebSity.Models.UserProfile
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/Partials/Profile/_ProfileLayout.cshtml";
+}
+
+@section PersonalDetails {
+    @await Html.PartialAsync("Partials/Profile/_PersonalDetails", Model)
+}
+@section EducationContent {
+    @await Html.PartialAsync("Partials/Profile/_EducationContent")
+}
+@section ExperienceContent {
+    @await Html.PartialAsync("Partials/Profile/_ExperienceContent")
+}
+@section SkillsContent {
+    @await Html.PartialAsync("Partials/Profile/_SkillsContent")
+}
